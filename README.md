@@ -1,10 +1,10 @@
-# vx-NIB
+# Voxa3 starter kit
 
-Voice Experience for NIB 
+Voxa3 starter kit
 
 ### Development Setup
 
-* Install and use Node v6.10
+* Install and use Node v8.10
 * Run `npm install`
 * Edit `config/local.json` with all of the requisite fields.
 

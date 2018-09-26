@@ -6,7 +6,7 @@ const Voxa = require('voxa');
 const voxaGA = require('voxa-ga');
 const voxaDashbot = require('voxa-dashbot');
 const Storage = require('../services/Storage');
-const User = require('../services/User');
+// const User = require('../services/User');
 const debug = require('debug')('voxa');
 const Promise = require('bluebird');
 const Raven = require('raven');
@@ -34,7 +34,7 @@ function register(app) {
 
   // Init app handlers
   app.onRequestStarted(getUserFromDB);
-  app.onRequestStarted(initUser);
+  // app.onRequestStarted(initUser);
 
   app.onIntentRequest(sendEventIntent);
 
@@ -51,8 +51,8 @@ function register(app) {
   Voxa.plugins.replaceIntent(app);
 
   // Analytics
-  voxaGA(app, config.googleAnalytics);
-  voxaDashbot(app, config.dashbot);
+  // voxaGA(app, config.googleAnalytics);
+  // voxaDashbot(app, config.dashbot);
 
   function startTimer(voxaEvent, reply) {
     const context = voxaEvent.executionContext;
@@ -141,21 +141,21 @@ function register(app) {
     }
   }
 
-  async function initUser(request) {
-    if (request.intent && _.includes(audioPlayerRequest, request.intent.name)) {
-      _.set(request, 'session.new', true);
-    }
+  // async function initUser(request) {
+  //   if (request.intent && _.includes(audioPlayerRequest, request.intent.name)) {
+  //     _.set(request, 'session.new', true);
+  //   }
 
-    const userId = _.get(request, 'context.System.user.userId') || request.user.userId;
-    const accessToken = _.get(request, 'context.System.user.accessToken') || request.user.accessToken;
+  //   const userId = _.get(request, 'context.System.user.userId') || request.user.userId;
+  //   const accessToken = _.get(request, 'context.System.user.accessToken') || request.user.accessToken;
 
-    const user = new User(request.model.user);
-    _.set(user, 'userId', userId);
-    _.set(user, 'accessToken', accessToken);
+  //   const user = new User(request.model.user);
+  //   _.set(user, 'userId', userId);
+  //   _.set(user, 'accessToken', accessToken);
 
-    await user.loadUserType(request);
-    _.set(request, 'model.user', user);
-  }
+  //   await user.loadUserType(request);
+  //   _.set(request, 'model.user', user);
+  // }
 
 
   function sendEventIntent(request) {

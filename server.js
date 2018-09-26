@@ -5,8 +5,9 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const http = require('http');
 const Raven = require('raven');
+const config = require('./config');
 
-Raven.config().install();
+Raven.config(config.raven.DSN).install();
 
 const router = express.Router();
 const {

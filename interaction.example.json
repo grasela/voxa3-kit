@@ -1,0 +1,13 @@
+{
+  "local-manifest": {
+    "publishingInformation.locales.en-US.name": "Local headspace",
+    "publishingInformation.locales.en-GB.name": "Local headspace",
+    "apis.custom.endpoint.uri": "https://a4a8e881.ngrok.io/skill",
+    "events.endpoint.uri": "https://a4a8e881.ngrok.io/skill",
+    "apis.custom.endpoint.sslCertificateType": "Wildcard",
+    "events.endpoint.sslCertificateType": "Wildcard"
+  },
+  "spreadsheets": ["1jUGN5ZGPJLg5n3oPeGrqJYoVUhZw1FkHgPyffR4od0c", "1JmJF10hVsaGjqTf-Xcy2DZOtGHfWls8D_OhWyBKxSXQ"],
+  "content": ["MeditationFile", "MeditationPacks", "TIME_ZONES"],
+  "platform": ["alexa", "dialogFlow"]
+}

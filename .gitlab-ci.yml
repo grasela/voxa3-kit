@@ -1,0 +1,17 @@
+# stages:
+#   - deploy
+
+# deploy.production: 
+#   only: 
+#     - production
+#   stage: deploy
+#   before_script:
+#   script: 
+#     - sh deploy.sh
+# deploy.staging: 
+#   only: 
+#     - master 
+#   stage: deploy
+#   before_script:
+#   script: 
+#     - sh deploy.sh

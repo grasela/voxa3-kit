@@ -1,0 +1,83 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: nib-health
+plugins:
+  - serverless-sentry
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+custom:
+  config: ${file(config/index.js):asFunction}
+  sentry:
+    dsn: ${self:custom.config.raven.DSN}
+
+provider:
+  name: aws
+  # profile: nib-health
+  runtime: nodejs8.10
+  iamRoleStatements:
+  -  Effect: "Allow"
+     Action:
+     - "dynamodb:*"
+     Resource:
+       Fn::GetAtt:
+         - TableUsers
+         - "Arn"
+  environment:
+      DEBUG: api
+      NODE_ENV: ${opt:stage}
+      SENTRY_RELEASE: ${env:GIT_COMMIT}
+
+      
+functions:
+  skill:
+    timeout: 7
+    handler: app/index.alexa
+    events:
+      - alexaSkill
+
+
+  dialogFlowAction:
+    timeout: 6
+    handler: app/index.dialogFlow
+    events:
+      - http:
+          path: dialogFlow
+          method: POST
+
+package:
+  exclude:
+    - assets/**
+    - coverage/**
+    - test/**
+    - speech-assets/**
+    - .git/**
+
+resources:
+  Resources:
+    TableUsers:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.config.dynamoDB.tables.users}
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 10
+          WriteCapacityUnits: 10

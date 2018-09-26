@@ -1,0 +1,48 @@
+{
+	"server": {
+	  "port": 3000,
+	  "hostSkill": true
+	},
+	"aws": {
+	  "region": "us-east-2"
+	},
+	"raven": {
+		"DSN": "https://6fd73d710f104778b2bf0a131a43e0fd@sentry.io/1288504",
+		"environment": "production"
+	  },
+	"dynamoDB": {
+	  "tables": {
+		"users": "nib-user-production"
+	  }
+	},
+	"s3": {
+	  "bucket": "nib-health-production",
+	  "url": "https://s3.amazonaws.com/nib-health-production/"
+	},
+	"googleAnalytics": {
+	  "trackingId": "",
+	  "appName": "nib-health-staging",
+	  "ignoreUsers": [],
+	  "suppressSending": false,
+	  "debug": true
+	},
+	"dashbot" : {
+		"debug": true,
+		"suppressSending": false,
+		"alexa": {
+		  "api_key": ""
+		},
+		"dialogFlow": {
+		  "api_key": ""
+		}
+	  },
+	"timezone": "America/New_York",
+	"cloudwatch": {
+	  "namespace": "NIB production"
+	},
+	"api": {
+	  "baseURL": "https://api.production.nib.com/"
+	},
+	"enableTestStates": true
+  }
+  

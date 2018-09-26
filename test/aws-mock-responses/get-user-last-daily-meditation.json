@@ -1,0 +1,21 @@
+{
+  "Item": {
+    "audioPlayed": {
+        "date": "2018-02-26T00:14:35.441Z",
+        "file": "pack-evdh-test22-s22-10min.mp3"
+    },
+    "lastVisit": "2018-02-26T10:02:46.067Z",
+    "createdDate": "2018-01-26T21:29:24.260Z",
+    "wasPlayingAudioOnSession": true,
+    "userId": "amzn1.ask.account.AFFBASU72SMKCE32WJFLFRZL62Z5VWX3INN4WHSR5DR5BUPE6DC3BCDN54UQF35FGM4CFJZ2ZTS2HOTJGB6P7N53OPD3ODJO2ZHRGGF2DQWBO6UEW5G56HNZSSJRI4Z6DVT3CAXDZ76ZSYAATFGWMQPJ3XBO3EHN3JW6OMNBIPCJSJYPSNXJEPWIR3XE4QM3HWW2ZXOQTYM3JYY",
+    "modifiedDate": "2018-02-26T10:02:46.068Z",
+    "firstTimeOnMeditation": {
+        "daily-meditation": 55,
+        "evening": 57
+    },
+    "pauseCounter": {
+        "daily-meditation": 3,
+        "evening": 9
+    }
+  }
+}

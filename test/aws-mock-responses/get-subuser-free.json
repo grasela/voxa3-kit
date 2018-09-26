@@ -1,0 +1,24 @@
+{
+  "Item": {
+    "userId": "amzn1.ask.account.VOID",
+    "lastVisit": "lastVisit",
+    "lastUserType": "AUTH_FREE",
+    "accessToken": "ACCOUNT_SUBSCRIBED",
+    "userType": "ACCOUNT_SUBSCRIBED",
+    "audio": {
+      "id": 1,
+      "title": "sleeping",
+      "description": "description if available",
+      "duration": 5,
+      "packName": "random pack Name",
+      "smallImageUrl": "https://hs-staging-content.imgix.net/singles_sleeping_header__1488513500062.ai?fm=png32&w=720&fs=png&fit=crop&h=480&crop=entropy&ixlib=js-1.0.5&s=ee8cdf722c541fb9e4d80dfed22ffb78",
+      "largeImageUrl": "https://hs-staging-content.imgix.net/singles_sleeping_header__1488513500062.ai?fm=png32&w=720&fs=png&fit=crop&h=480&crop=entropy&ixlib=js-1.0.5&s=ee8cdf722c541fb9e4d80dfed22ffb78",
+      "audioUrl": "https://audio-url.mp3",
+      "backgroundImageUrl": "https://hs-staging-content.imgix.net/singles_sleeping_header__1488513500062.ai?fm=png32&w=720&fs=png&fit=crop&h=480&crop=entropy&ixlib=js-1.0.5&s=ee8cdf722c541fb9e4d80dfed22ffb78",
+      "isPackCompleted": true
+    },
+    "audioPlayed": {
+      "file": "pack-evdh-test22-s8-10min.mp3"
+    }
+  }
+}

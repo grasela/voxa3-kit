@@ -6,6 +6,7 @@
 	"scripts": {
 		"test": "mocha --recursive test/**/*.spec.js",
 		"watch": "node node_modules/gulp/bin/gulp.js watch",
+		"interaction": "node node_modules/voxa-cli/",
 		"lint": "eslint config/ gulpfile.js services/ skill/ speechAssets/ test/ server.js"
 	},
 	"author": "VERSA",
@@ -15,7 +16,7 @@
 	"keywords": [
 		"alexa skill",
 		"skills",
-		"node.js >=4.3.2",
+		"node.js >=8.10",
 		"echo",
 		"amazon"
 	],
@@ -23,22 +24,32 @@
 	"dependencies": {
 		"aws-sdk": "^2.7.23",
 		"bluebird": "^3.3.5",
+		"body-parser": "^1.18.3",
 		"dynamodb-doc": "^1.0.0",
+		"express": "^4.16.3",
 		"http": "^0.0.0",
-		"lodash": "^4.17.4",
+		"lambda-log": "^2.0.0",
+		"lodash": "^4.17.11",
 		"morgan": "^1.9.1",
 		"raven": "^2.6.4",
 		"voxa": "3.0.0-alpha25",
-		"voxa-cli": "1.0.2-alpha20"
+		"voxa-dashbot": "^0.1.8",
+		"voxa-ga": "^1.1.0"
 	},
 	"devDependencies": {
+		"ask-cli": "^1.4.3",
 		"chai": "^3.5.0",
+		"dynamodb-local": "^0.0.22",
 		"eslint": "^3.15.0",
 		"eslint-config-airbnb-base": "^11.1.0",
 		"eslint-plugin-import": "^2.2.0",
 		"gulp": "^3.9.1",
 		"gulp-nodemon": "^2.0.7",
-		"mocha": "^3.2.0"
+		"mocha": "^3.2.0",
+		"serverless": "^1.32.0",
+		"serverless-sentry": "^1.2.0",
+		"serverless-sentry-lib": "^1.1.2",
+		"voxa-cli": "1.0.2-alpha20"
 	},
 	"directories": {
 		"test": "test"

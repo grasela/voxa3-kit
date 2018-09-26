@@ -1,0 +1,17 @@
+{
+  "Item": {
+    "userId": "amzn1.ask.account.VOID",
+    "lastVisit": "date",
+    "pauseCounter": {
+      "daily-meditation": 1,
+      "evening": 1
+    },
+    "firstTimeOnMeditation": {
+      "daily-meditation": 1,
+      "evening": 1
+    },
+    "audioPlayed": {
+      "file": "pack-evdh-test22-s8-10min.mp3"
+    }
+  }
+}

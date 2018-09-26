@@ -1,0 +1,14 @@
+{
+  "Item": {
+    "userId": "amzn1.ask.account.VOID",
+    "lastUserType": "NO_AUTH",
+    "audio": {
+      "file": "pack-evdh-test22-s8-10min.mp3",
+      "offsetInMilliseconds": 1,
+      "type": "daily-meditation"
+    },
+    "audioPlayed": {
+      "file": "pack-evdh-test22-s8-10min.mp3"
+    }
+  }
+}

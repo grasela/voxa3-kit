@@ -10,7 +10,7 @@
 	},
 	"author": "VERSA",
 	"engines": {
-		"node": ">=4.3.2"
+		"node": ">=8.10"
 	},
 	"keywords": [
 		"alexa skill",
@@ -21,11 +21,15 @@
 	],
 	"license": "ISC",
 	"dependencies": {
-		"voxa": "^2.0.0",
-		"bluebird": "^3.3.5",
-		"lodash": "^4.17.4",
 		"aws-sdk": "^2.7.23",
-		"dynamodb-doc": "^1.0.0"
+		"bluebird": "^3.3.5",
+		"dynamodb-doc": "^1.0.0",
+		"http": "^0.0.0",
+		"lodash": "^4.17.4",
+		"morgan": "^1.9.1",
+		"raven": "^2.6.4",
+		"voxa": "3.0.0-alpha25",
+		"voxa-cli": "1.0.2-alpha20"
 	},
 	"devDependencies": {
 		"chai": "^3.5.0",

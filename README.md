@@ -1,7 +1,7 @@
 # Voxa3 starter kit
 
 Voxa3 starter kit
-
+https://voxa.readthedocs.io/en/v3/
 ### Development Setup
 
 * Install and use Node v8.10
